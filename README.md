@@ -10,6 +10,39 @@ A customizable Liquid Glass effect library for Jetpack Compose.
 
 [Documentation](https://kyant.gitbook.io/backdrop)
 
+## Usage
+
+### Accessing the Backdrop API
+
+The backdrop library provides its API through two packages:
+
+1. **Main package** (`com.kyant.backdrop`): Contains the core `Backdrop` interface and convenience wrappers
+2. **Backdrops subpackage** (`com.kyant.backdrop.backdrops`): Contains various Backdrop implementations
+
+You can import functions in two ways:
+
+```kotlin
+// Option 1: Import from the main package (recommended for convenience)
+import com.kyant.backdrop.rememberLayerBackdrop
+import com.kyant.backdrop.rememberCombinedBackdrop
+import com.kyant.backdrop.layerBackdrop
+
+// Option 2: Import from the backdrops subpackage (explicit)
+import com.kyant.backdrop.backdrops.rememberLayerBackdrop
+import com.kyant.backdrop.backdrops.rememberCombinedBackdrop
+import com.kyant.backdrop.backdrops.layerBackdrop
+```
+
+Both approaches work identically. The main package exports convenience wrappers for easier access.
+
+### Available Backdrop Types
+
+- `rememberLayerBackdrop`: Captures content drawn to a GraphicsLayer for backdrop effects
+- `rememberCombinedBackdrop`: Combines multiple backdrops
+- `rememberCanvasBackdrop`: Creates a backdrop with custom canvas drawing
+- `rememberBackdrop`: Wraps a backdrop with custom drawing logic
+- `emptyBackdrop()`: Returns an empty backdrop that doesn't draw anything
+
 ## Components
 
 The library does not include any high-level components; you will need to create your own.
